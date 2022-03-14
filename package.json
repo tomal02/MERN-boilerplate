@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm start\""
+    "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm start\"",
+    "start": "cd ./server/ && npm install && node server.js",
+    "heroku-postbuild": "cd ./client/ && npm install && npm run build",
+    "backend": "cd ./server/ && nodemon server.js ",
+    "frontend": "cd ./client/ && npm start"
   },
   "author": "",
   "license": "ISC",
